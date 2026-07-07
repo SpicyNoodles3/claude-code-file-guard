@@ -1,5 +1,7 @@
 # file-guard
 
+[![test](https://github.com/SpicyNoodles3/claude-code-file-guard/actions/workflows/test.yml/badge.svg)](https://github.com/SpicyNoodles3/claude-code-file-guard/actions/workflows/test.yml)
+
 Protect your files from your own agent — one auditable bash script. `file-guard`
 is a Claude Code [PreToolUse hook](https://docs.claude.com/en/docs/claude-code/hooks)
 that blocks the agent from writing to paths you declare protected. It is one
