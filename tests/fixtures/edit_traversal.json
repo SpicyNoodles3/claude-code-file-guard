@@ -1,0 +1,1 @@
+{"session_id":"test","cwd":"__SB__/allowed","hook_event_name":"PreToolUse","tool_name":"Edit","tool_input":{"file_path":"__SB__/allowed/../protected/secret.txt","old_string":"a","new_string":"b"}}

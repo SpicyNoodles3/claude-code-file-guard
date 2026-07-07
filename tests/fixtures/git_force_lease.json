@@ -1,0 +1,1 @@
+{"session_id":"test","cwd":"__SB__","hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{"command":"git push __DASH__force-with-lease"}}

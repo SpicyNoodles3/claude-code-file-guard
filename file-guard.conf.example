@@ -1,0 +1,35 @@
+# file-guard.conf — one glob pattern per line.
+#
+# Copy this to .claude/file-guard.conf (project) or ~/.claude/file-guard.conf
+# (global). The hook uses the FIRST config it finds; there is no merging.
+#
+# Rules:
+#   - Lines starting with # are comments. Blank lines are ignored.
+#   - Leading/trailing whitespace is trimmed.
+#   - `~/` at the start of a pattern expands to your home directory.
+#   - A pattern CONTAINING a slash matches the full absolute path; if it is
+#     relative (no leading / or ~/), it matches at any depth.
+#   - A pattern WITHOUT a slash matches the basename anywhere.
+#   - Matching is case-insensitive by default (set FILE_GUARD_CASE_SENSITIVE=1
+#     to opt out).
+#   - `*` in a pattern crosses `/` boundaries, so `secrets/*` already matches
+#     nested files like `secrets/prod/db.pem`. You do NOT need `secrets/**`.
+
+# --- Recommended: protect the guard itself from being disarmed ---------------
+# Without these, the agent could edit the config or the hook wiring to turn the
+# guard off. Adding them is not a hard lock (see README "What it does NOT do"),
+# but it makes disarming a visible, blocked action instead of a silent one.
+~/.claude/file-guard.conf
+.claude/file-guard.conf
+.claude/settings.json
+
+# --- Credentials and keys ----------------------------------------------------
+.env
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# --- Whole directories -------------------------------------------------------
+# secrets/*
+# ~/Documents/private/*

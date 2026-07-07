@@ -1,0 +1,9 @@
+# Local, machine-specific config — copy from file-guard.conf.example.
+.claude/file-guard.conf
+
+# Guard decision log, if you point FILE_GUARD_LOG at the repo.
+*.log
+
+# OS / editor cruft.
+.DS_Store
+*.swp

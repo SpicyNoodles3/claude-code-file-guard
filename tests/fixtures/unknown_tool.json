@@ -1,0 +1,1 @@
+{"session_id":"test","cwd":"__SB__","hook_event_name":"PreToolUse","tool_name":"SomeMcpWriteTool","tool_input":{"file_path":"__SB__/protected/secret.txt","data":"x"}}
